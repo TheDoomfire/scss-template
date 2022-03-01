@@ -1,0 +1,38 @@
+@use "../abstracts" as *;
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    //removes the dots
+    list-style-type: none;
+}
+
+a {
+    //Removes the Underline
+    text-decoration: none;
+    color: $color-three;
+
+    &:hover {
+        color: $color-three-200;
+    }
+}
+
+//When you highlight something like text & images.
+::selection {
+    background-color: $color-three-300;
+    color: $color-one;
+}
+
+img {
+    //Makes the pictures look better by cropping them.
+    object-fit: cover;
+    
+    width: 100%;
+
+    @include screen(tablet) {
+        max-width: auto;
+    }
+}

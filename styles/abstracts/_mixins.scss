@@ -1,0 +1,27 @@
+@use "./variables" as *;
+
+//For Media Queries
+@mixin screen($size) {
+    @if $size == phone { 
+        @media (min-width: $size-screen-phone) { @content; }
+    } @else if $size == tablet {
+        @media (min-width: $size-screen-tablet) { @content; }
+    } @else if $size == pc {
+        @media (min-width: $size-screen-pc) { @content; }
+    }
+    
+};
+
+//The Container Sizes
+@mixin container($size) {
+    //To center it.
+    margin: 0 auto;
+    padding: 0 $padding-sides;
+    @if $size == small { 
+        max-width: $container-size-small;
+    } @else if $size == medium {
+        max-width: $container-size-medium;
+    } @else if $size == big {
+        max-width: $container-size-big;
+    }
+};

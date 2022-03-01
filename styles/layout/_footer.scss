@@ -1,0 +1,8 @@
+@use "../abstracts" as *;
+
+footer {
+    .copyright {
+        display: flex;
+        justify-content: center;
+    }
+}

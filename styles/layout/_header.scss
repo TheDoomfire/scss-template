@@ -1,0 +1,46 @@
+@use "../abstracts" as *;
+
+header {
+
+    .container {
+        @include container(big);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    a {
+        color: inherit;
+
+        span {
+            &:hover {
+                color: inherit;
+            }
+        }
+    }
+
+    nav {
+        display: flex;
+        
+        li {
+            padding: 0 0.5em;
+
+            &:last-child {
+                padding-right: 0;
+            }
+
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+    }
+
+    .title {
+
+        span {
+            color: $color-three;  
+        }
+
+    }
+
+}
